@@ -51,12 +51,12 @@ const clicked = (postId) => {
 const displayComment = (data) => {
     console.log(data)
     const commentContainer1 = document.getElementById('comment-container1')
-    // commentContainer1 = ''
+    commentContainer1.innerHTML = ''
     const newComment = document.createElement('div');
     newComment.classList.add('card-body')
     newComment.innerHTML = `
                 <h5 class="card-title"> ${data.body}</h5>
-                <p class="card-text">${data.userId}</p>
+                <p class="card-text">User ID:${data.userId}</p>
                 <p class="btn btn-primary">Go :${data.title}</p>
                 <p class="btn btn-primary">ID :${data.id}</p>
     
